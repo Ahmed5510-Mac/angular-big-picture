@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-big-pic": {
+    "big-revision": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-big-pic",
+            "outputPath": "dist/big-revision",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -28,11 +28,18 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/sweetalert2/src/sweetalert2.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -65,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-big-pic:build:production"
+              "browserTarget": "big-revision:build:production"
             },
             "development": {
-              "browserTarget": "angular-big-pic:build:development"
+              "browserTarget": "big-revision:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-big-pic:build"
+            "browserTarget": "big-revision:build"
           }
         },
         "test": {
@@ -102,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "fd256353-d12a-49bb-a418-4f3cde9dae31"
+    "analytics": "d9ddb880-1d7c-4e67-a084-a20c748a0c19"
   }
 }

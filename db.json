@@ -1,0 +1,49 @@
+{
+  "sinUp": [
+    {
+      "first-name": "ahmed",
+      "last-name": "darwish",
+      "email": "ahmed@gmail.com",
+      "password": "Ahmed5510",
+      "id": 2
+    },
+    {
+      "first-name": "mohamed",
+      "last-name": "essam",
+      "email": "d@gmail.com",
+      "password": "Ahmed123",
+      "id": 3
+    },
+    {
+      "first-name": "mohamed",
+      "last-name": "essam",
+      "email": "d@gmail.com",
+      "password": "Ahmed123",
+      "id": 4
+    },
+    {
+      "first-name": "alidf",
+      "last-name": "esrkob",
+      "email": "emai@g.com",
+      "password": "Emav123456",
+      "id": 5
+    },
+    {
+      "first-name": "monah",
+      "last-name": "Ali   ",
+      "email": "mona@gmail.com",
+      "password": "Afff12345",
+      "id": 6
+    }
+  ],
+  "sinIn": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

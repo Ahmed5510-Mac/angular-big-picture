@@ -1,0 +1,42 @@
+
+<div class="alert m-auto alert-danger" [class.animi]="invalidRegestration" *ngIf="invalidRegestration">
+  <p>{{errorMessage}}</p>
+</div>
+<form class=" form-box" [formGroup]='registrationForm' (ngSubmit)="registerForm()" >
+  <h1>Registration Form</h1>
+  <!-- ------------------first-name---------------------- -->
+  <div class="firestname">
+    <label for=""> First Name</label>
+    <input
+    [class.is-valid]="registrationForm.get('first-name')?.errors ==null"
+    type="text" formControlName="first-name" class="form-control">
+    <p *ngIf="registrationForm.get('first-name')?.errors !=null &&registrationForm.get('first-name')?.touched"
+    class="text-danger">error enter valid name</p>
+  </div>
+  <!-- ------------------last-name---------------------- -->
+  <div class="last-name">
+    <label for=""> Last Name</label>
+    <input
+    [class.is-valid]="registrationForm.get('last-name')?.errors ==null"
+    type="text" formControlName="last-name" class="form-control">
+    <p *ngIf="registrationForm.get('last-name')?.errors !=null &&registrationForm.get('last-name')?.touched" class="text-danger">error enter valid last name</p>
+  </div>
+  <!-- ------------------email---------------------- -->
+  <div class="email">
+    <label for=""> Email</label>
+    <input
+    [class.is-valid]="registrationForm.get('email')?.errors ==null"
+    type="email" formControlName="email" class="form-control">
+    <p *ngIf="registrationForm.get('email')?.errors !=null &&registrationForm.get('email')?.touched" class="text-danger">error enter valid email</p>
+  </div>
+  <!-- ------------------password---------------------- -->
+  <div class="password">
+    <label for=""> password</label>
+    <input
+    [class.is-valid]="registrationForm.get('password')?.errors ==null"
+    type="password" formControlName="password" class="form-control">
+    <p *ngIf="registrationForm.get('password')?.errors !=null &&registrationForm.get('password')?.touched" class="text-danger">error enter valid password</p>
+  </div>
+  <p> You Have Already Acount <a class="golink" (click)="goSignin()">sing in</a> </p>
+  <button [disabled]="registrationForm.invalid" type="submit" class=" btn btn-info mt-2 test-white"> submit</button>
+</form>

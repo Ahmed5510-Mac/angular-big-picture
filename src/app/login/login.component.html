@@ -1,0 +1,28 @@
+
+<div class="alert m-auto alert-danger " [class.animi]="invalidLogin" *ngIf="invalidLogin">
+  <p>{{errorMessage}}</p>
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<form class="  form-box" [formGroup]='loginForm' (ngSubmit)="loginFormFun()">
+  <h1>Login Form</h1>
+  <!-- --------------------email------------------------- -->
+  <div class="email">
+    <label for="">Email</label>
+    <input
+    [class.is-valid]="loginForm.get('email')?.errors ==null && loginForm.get('email')?.touched"
+    type="email" formControlName="email" class="form-control">
+    <p *ngIf="loginForm.get('email')?.errors !=null &&loginForm.get('email')?.touched" class="text-danger">error enter valid email</p>
+  </div>
+  <!-- ------------------password------------------------ -->
+  <div class="password">
+    <label for="">password</label>
+    <input
+    [class.is-valid]="loginForm.get('password')?.errors ==null&&loginForm.get('password')?.touched"
+    type="password" formControlName="password" class="form-control">
+    <p *ngIf="loginForm.get('password')?.errors !=null &&loginForm.get('password')?.touched" class="text-danger">error enter valid password</p>
+  </div>
+  <p> Create New Account <a class="golink" (click)="goRegistration()" >SignUp</a> </p>
+  <button [disabled]="loginForm.invalid" type="submit" class=" btn btn-info mt-2 test-white"> Login</button>
+</form>
+<!-- ----------------------------------------------------------------------------- -->
+
