@@ -7,12 +7,13 @@ import { LoginComponent } from './login/login.component';
 import { RegestrationComponent } from './regestration/regestration.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TvComponent } from './tv/tv.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { ChatComponent } from './chat/chat.component';
+import { whatsappChatComponent } from './whatsapp-chat/whatsapp-chat.component';
 import { UsersComponent } from './users/users.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ChatContengComponent } from './chat-conteng/chat-conteng.component';
 
 
 @NgModule({
@@ -23,8 +24,10 @@ import { UsersComponent } from './users/users.component';
     AboutComponent,
     NavbarComponent,
     NotfoundComponent,
-    ChatComponent,
+    whatsappChatComponent,
     UsersComponent,
+    SidebarComponent,
+    ChatContengComponent,
   ],
   imports: [
     BrowserModule,
