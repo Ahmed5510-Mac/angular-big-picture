@@ -1,0 +1,52 @@
+.container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  padding: 0;
+  .header{
+    flex-basis:60px ;
+    width:100%;
+    margin: 0;
+
+    .header-content{
+      height: 100%;
+      border:1px solid red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .acount-info{
+        width:fit-content ;
+        height:100%;
+        border:1px solid blue;
+        display: flex;
+        align-items: center;
+        gap:20px;
+        padding-inline: 15px;
+        .chat-user-avatar{
+          border:1px solid green;
+          img{
+              width:40px;
+              height:40px;
+              border-radius:50%;
+
+          }
+        }
+      }
+      .header-acount-action{
+        height: 100%;
+        border:1px solid rgb(11, 42, 194);
+        display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+    }
+  }
+  .body{
+    flex-basis:calc(100% - 120px);
+    background:#0c1317;
+  }
+  .footer{
+    flex-basis: 60px;
+  }
+}

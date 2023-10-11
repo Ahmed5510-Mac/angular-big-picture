@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,6 +7,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class SidebarComponent {
+  @Output()conversationClicked:EventEmitter <any> = new EventEmitter();
   arrowiconChang=false
   searchiconChang=true
   iconswitch(){

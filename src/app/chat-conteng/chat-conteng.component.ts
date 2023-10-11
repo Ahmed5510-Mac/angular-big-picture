@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./chat-conteng.component.scss']
 })
 export class ChatContengComponent {
+  user:any;
+  imgavtar:string='../../assets/images/ahmed darwish.jpg'
 
 }

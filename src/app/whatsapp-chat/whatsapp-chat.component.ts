@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./whatsapp-chat.component.scss']
 })
 export class whatsappChatComponent {
+  conversation:any;
+  onConversationselected(user:any){
+    this.conversation=user
+  }
 
 }

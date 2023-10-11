@@ -32,7 +32,8 @@
   <div class="sidebar-content">
     <!-- <div class="Noconversition">All chat are archived</div> -->
     <!-- -------------conversation------------------- -->
-    <div class="conversation" *ngFor="let convers of conversition">
+    <div class="conversation" *ngFor="let convers of conversition"
+       (click)="conversationClicked.emit(convers)">
       <div class="pictuer">
       <span class="conversation-avatar"><img [src]="convers.imageUrl" alt="AvatarIcon Icon"></span>
       </div>

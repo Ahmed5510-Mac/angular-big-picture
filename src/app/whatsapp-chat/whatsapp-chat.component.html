@@ -1,7 +1,7 @@
 <div class="chat-container">
-<app-sidebar class="sidebar"></app-sidebar>
+<app-sidebar class="sidebar" (conversationClicked)="onConversationselected($event)"></app-sidebar>
   <div class="chat">
-    <div class="chathplaceholder">
+    <div class="chathplaceholder" *ngIf="!conversation">
       <img src="../../assets/images/keep-mobil.png" alt="">
       <h2>keep you phone connected</h2>
       <p>WhatsApp connects to your phone to sync message. To reduce data  <br>
@@ -15,7 +15,7 @@
        </span>
       </span>
     </div>
-    <!-- <app-chat-conteng></app-chat-conteng> -->
+    <app-chat-conteng></app-chat-conteng>
   </div>
 
 </div>
