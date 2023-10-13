@@ -34,6 +34,20 @@
       "email": "mona@gmail.com",
       "password": "Afff12345",
       "id": 6
+    },
+    {
+      "first-name": "Moahmed",
+      "last-name": "Gmal1",
+      "email": "M@gmila.com",
+      "password": "A1234567",
+      "id": 7
+    },
+    {
+      "first-name": "ahmed",
+      "last-name": "Darwish",
+      "email": "ahmed@gmail.com",
+      "password": "A1234567",
+      "id": 8
     }
   ],
   "sinIn": [

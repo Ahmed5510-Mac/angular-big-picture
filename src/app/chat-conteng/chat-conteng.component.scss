@@ -1,19 +1,33 @@
+// =========================================
+
+@mixin  messageTip{
+         content:"";
+         position: absolute;
+         width: 20px;
+         height: 20px;
+         top:10px;
+ }
+// =========================================
+
 .container{
   display: flex;
   width: 100%;
   height: 100%;
   flex-direction: column;
   padding: 0;
+
   .header{
     flex-basis:60px ;
     width:100%;
     margin: 0;
+
     .header-content{
       height: 100%;
       min-height: 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       .acount-info{
         width:fit-content ;
         height:100%;
@@ -21,26 +35,32 @@
         align-items: center;
         gap:20px;
         padding-inline: 15px;
+
         .chat-user-avatar{
           img{
               width:40px;
               height:40px;
               border-radius:50%;
+              cursor: pointer;
 
           }
+        }
+        .chat-user-name{
+          cursor: pointer;
         }
       }
       .header-acount-action{
         height: 100%;
         display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-inline:15px
+        justify-content: space-between;
+        align-items: center;
+        padding-inline:15px
       }
     }
   }
   .body{
     flex-basis:calc(100% - 120px);
+    min-height:calc(100% - 120px);
     background:#0c1317;
     position: relative;
 
@@ -63,15 +83,42 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     padding: 20px 50px;
     align-items:self-start;
+    overflow-Y:auto;
+
+       /* width */
+&::-webkit-scrollbar {
+  width: 5px;
+
+}
+/* Track */
+&::-webkit-scrollbar-track {
+
+}
+/* Handle */
+&::-webkit-scrollbar-thumb {
+  background: #374045;
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+  background: #455056;
+}
 
     .message{
       margin-top: 10px;
       padding:10px;
       border-radius: 5px;
-      flex-direction:column ;
+      flex-direction:column;
+      position: relative;
+
+      &:not(.me)::before{
+        left: 0;
+        background: linear-gradient(225deg,#202c33 0%,#202c33 50%,transparent 50%,transparent );
+        @include messageTip
+
+      }
       .message-content{
         background-color: #202c33;
         padding:10px;
@@ -84,6 +131,7 @@
           align-self: flex-end;
           font-weight: normal;
           color: #99beb7;
+          gap: 5px;
         }
       }
 
@@ -91,7 +139,15 @@
         align-self: flex-end;
         .message-content{
           background-color: #005c4b;
-          color:#c5d6d5
+          color:#c5d6d5;
+          &::before{
+            right: 0;
+            background: linear-gradient(135deg,#005c4b 0%,#005c4b 50%,transparent 50%,transparent );
+            @include messageTip
+
+
+
+      }
         }
       }
 
@@ -106,6 +162,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
     .imojey{
       flex-basis: 50px;
       display: flex;
@@ -116,10 +173,20 @@
       height: 45px;
 
       img:first-child{
-        width:50px
+        width:50px;
+        cursor: pointer;
+
       }
       img:last-child{
-        width:25px
+        width:25px;
+        cursor: pointer;
+
+      }
+      emoji-mart{
+        position: absolute;
+        bottom: 70px;
+        left: 10px;
+        z-index: 12;
       }
      }
      .text-message{
@@ -140,6 +207,22 @@
          &::placeholder{
           color: #7a8a97;
          }
+         &::-webkit-scrollbar {
+          width: 0;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: #374045;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: #455056;
+        }
         }
      }
      .mic{

@@ -15,6 +15,8 @@ import { UsersComponent } from './users/users.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChatContengComponent } from './chat-conteng/chat-conteng.component';
 import { CommonModule } from '@angular/common';
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
+
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { CommonModule } from '@angular/common';
     UsersComponent,
     SidebarComponent,
     ChatContengComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
