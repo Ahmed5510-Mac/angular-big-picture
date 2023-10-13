@@ -14,6 +14,7 @@ import { whatsappChatComponent } from './whatsapp-chat/whatsapp-chat.component';
 import { UsersComponent } from './users/users.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChatContengComponent } from './chat-conteng/chat-conteng.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ChatContengComponent } from './chat-conteng/chat-conteng.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    CommonModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
