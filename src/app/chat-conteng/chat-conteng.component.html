@@ -50,7 +50,7 @@
     <div class="text-message">
       <textarea [(ngModel)]="message" placeholder="Type message"#textMessage (keydown.enter)="sendMessage($event)"></textarea>
     </div>
-    <div class="mic">
+    <div class="mic"(click)="startRecording()">
         <img src="../../assets/images/mic.png" alt="">
     </div>
   </div>

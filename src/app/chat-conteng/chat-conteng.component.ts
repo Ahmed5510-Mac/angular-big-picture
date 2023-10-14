@@ -1,4 +1,5 @@
 import { Component, Input,ViewChild,ElementRef, OnInit, EventEmitter } from '@angular/core';
+import {MediaWhatsAppService} from '../services/media-whats-app.service'
 
 @Component({
   selector: 'app-chat-conteng',
@@ -6,8 +7,9 @@ import { Component, Input,ViewChild,ElementRef, OnInit, EventEmitter } from '@an
   styleUrls: ['./chat-conteng.component.scss']
 })
 export class ChatContengComponent  implements OnInit{
-  constructor(){
+  constructor( _MediaWhatsAppService:MediaWhatsAppService){
     console.log(this.users);
+   
 
    }
   ngOnInit(): void {
